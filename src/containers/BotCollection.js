@@ -11,7 +11,7 @@ class BotCollection extends React.Component {
     		<div className="row">
     		  {/*...and here..*/}
 			  {bots.length > 0 && bots.map(bot => 
-				  <BotCard bot={bot} addToArmy={addToArmy}/>
+				  <BotCard bot={bot} addToArmy={addToArmy}/> //removing addToArmy prop
 			  )}
     		  Collection of all bots
     		</div>

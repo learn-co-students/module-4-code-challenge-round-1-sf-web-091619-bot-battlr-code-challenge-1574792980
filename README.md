@@ -56,7 +56,7 @@ _Note that nothing needs to be persisted. Refreshing the page should clear out t
 
 
 ## Checkpoint!
-
+ 
 If you have gotten this far, you have hit the checkpoint. Your app should look like the following:
 
 ![alt text][checkpoint]

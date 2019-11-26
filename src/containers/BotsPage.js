@@ -29,6 +29,11 @@ class BotsPage extends React.Component {
     this.setState({botarmy: array})
   }
 
+  isTopRow(e) {
+    //DEBUGGING!  Need to see if top row bot is clicked.
+    console.log(e)
+  }
+
   addToArmy = (bot) => {
     const { botarmy } = this.state
     botarmy.includes(bot) ? 
@@ -36,13 +41,22 @@ class BotsPage extends React.Component {
       this.setState({botarmy: [...botarmy, bot]})
   }
 
+  removeFromArmy = (bot) => {
+    const { botarmy } = this.state
+    botarmy.includes(bot) && 
+      this.removeBotFromArmy(bot) 
+  }
+
   render() {
     const { bots, botarmy } = this.state
     return (
       <div>
         {/* put your components here */}
-        < YourBotArmy botarmy={botarmy}/>
-        < BotCollection bots={bots} addToArmy={this.addToArmy }/>
+        < YourBotArmy botarmy={botarmy} removeFromArmy={this.removeFromArmy}/>
+
+
+        {/* Changing to BotSpecs here???*/}
+        < BotCollection bots={bots} addToArmy={this.addToArmy }/>  {/* removing add to army prop?? */}
       </div>
     );
   }

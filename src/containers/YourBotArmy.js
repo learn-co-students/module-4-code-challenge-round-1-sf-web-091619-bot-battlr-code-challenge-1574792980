@@ -11,7 +11,7 @@ class YourBotArmy extends React.Component {
           <div className="row bot-army-row">
             {/*...and here...*/}
             {this.props.botarmy.length > 0 && this.props.botarmy.map(bot => 
-				      <BotCard bot={bot} />
+				      <BotCard bot={bot} removeFromArmy={this.props.removeFromArmy} />
 			      )}
             Your Bot Army
           </div>
